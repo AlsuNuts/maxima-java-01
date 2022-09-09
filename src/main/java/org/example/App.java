@@ -3,10 +3,17 @@ package org.example;
 
 public class App {
     public static void main(String[] args) {
-        int i = 1;
-        System.out.println(daysCount((byte)12, 2004));
-    }
 
+        System.out.println(isSimple(35));
+    }
+    public static int isSimple(int n) {
+        int result = 0;
+        for (int i=2; i<n; i++) {
+            result =  (n % i != 0) ? 0 : i;
+            if (result == i) break;
+        }
+        return result;
+    }
     public static byte daysCount(byte month, int year) {
         byte result = 0;
         switch (month) {
