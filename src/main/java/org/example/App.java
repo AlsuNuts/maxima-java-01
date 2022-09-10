@@ -3,13 +3,17 @@ package org.example;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println(isSimple(121));
+        System.out.println(isSimple(235683));
     }
     public static int isSimple(int n) {
         int result = 0;
-        for (int i=2; i<=(n/2); i++) {
+        if (n % 2 == 0) {
+            result = 2;
+        }
+        else
+            for (int i=3; i<=(n/2); i+=2) {
             result =  (n % i != 0) ? 0 : i;
-            if (result == i) break;
+            return i;
         }
         return result;
     }
