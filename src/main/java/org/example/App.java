@@ -3,16 +3,17 @@ package org.example;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println(isSimple(121));
+        System.out.println(isSimple( 121));
     }
 
     public static int isSimple(int n) {
-        if (n % 2 == 0) {
+        if (n > 2 & n % 2 == 0) {
             return 2;
         }
-        else
-            for (int i=3; i<=(n/2); i+=2) {
-            return (n % i != 0) ? 0 : i;
+        for (int i=3; i<=(n/2); i+=2) { // н= 25 , с 3х, до 12,5, с шагом +2(3,5,7, 9, 11)
+            if (n % i == 0) {
+                return i;
+            }
         }
         return 0;
     }
