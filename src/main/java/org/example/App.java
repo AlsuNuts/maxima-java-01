@@ -10,7 +10,7 @@ public class App {
         if (n > 2 & n % 2 == 0) {
             return 2;
         }
-        for (int i=3; i<=(n/2); i+=2) { // н= 25 , с 3х, до 12,5, с шагом +2(3,5,7, 9, 11)
+        for (int i=3; i<=(n/2); i+=2) {
             if (n % i == 0) {
                 return i;
             }
